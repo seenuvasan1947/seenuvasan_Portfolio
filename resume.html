@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seenuvasan T - Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.5;
+            color: #1f2937;
+            background: #f9fafb;
+            font-size: 10pt;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .resume {
+            max-width: 8.5in;
+            margin: 0.5in auto;
+            padding: 0.6in 0.7in;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 0.3in;
+            padding-bottom: 0.2in;
+            border-bottom: 3px solid #2563eb;
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            padding: 0.25in;
+            margin: -0.1in -0.1in 0.3in -0.1in;
+        }
+
+        .name {
+            font-size: 28pt;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 0.08in;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+
+        .title {
+            font-size: 11.5pt;
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 0.12in;
+            letter-spacing: 0.3px;
+        }
+
+        .contact {
+            font-size: 9pt;
+            color: #4b5563;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-top: 0.1in;
+        }
+
+        .contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 8px;
+            background: white;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 0.25in;
+            page-break-inside: avoid;
+        }
+
+        .section-title {
+            font-size: 13pt;
+            font-weight: 700;
+            color: #111827;
+            text-transform: uppercase;
+            border-bottom: 2.5px solid #2563eb;
+            padding-bottom: 0.06in;
+            margin-bottom: 0.15in;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2.5px;
+            left: 0;
+            width: 60px;
+            height: 2.5px;
+            background: #1e40af;
+        }
+
+        /* Professional Summary */
+        .section p {
+            font-size: 10pt;
+            color: #374151;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* Experience */
+        .job {
+            margin-bottom: 0.2in;
+            padding-left: 0.05in;
+            border-left: 2px solid #e5e7eb;
+            padding-left: 0.12in;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.05in;
+            gap: 0.1in;
+        }
+
+        .job-title {
+            font-size: 11.5pt;
+            font-weight: 700;
+            color: #111827;
+            line-height: 1.3;
+        }
+
+        .job-date {
+            font-size: 9pt;
+            color: #6b7280;
+            font-weight: 600;
+            white-space: nowrap;
+            background: #f3f4f6;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .company {
+            font-size: 10.5pt;
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 0.08in;
+        }
+
+        .project {
+            margin-bottom: 0.12in;
+            padding: 0.08in;
+            background: #f9fafb;
+            border-radius: 4px;
+            border-left: 3px solid #dbeafe;
+        }
+
+        .project-name {
+            font-size: 10.5pt;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.05in;
+        }
+
+        ul {
+            margin-left: 0.2in;
+            margin-bottom: 0.08in;
+            margin-top: 0.04in;
+        }
+
+        li {
+            font-size: 9.5pt;
+            color: #4b5563;
+            margin-bottom: 0.04in;
+            line-height: 1.5;
+            padding-left: 0.05in;
+        }
+
+        li::marker {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        li strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.12in 0.2in;
+        }
+
+        .skill-category {
+            margin-bottom: 0.08in;
+            padding: 0.08in;
+            background: #f9fafb;
+            border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+
+        .skill-label {
+            font-size: 10pt;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.05in;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            font-size: 9pt;
+        }
+
+        .skill-items {
+            font-size: 9.5pt;
+            color: #4b5563;
+            line-height: 1.5;
+        }
+
+        /* Achievements */
+        .achievement {
+            margin-bottom: 0.15in;
+            padding: 0.1in;
+            background: #fef3c7;
+            border-radius: 6px;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .achievement-title {
+            font-size: 10.5pt;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.04in;
+        }
+
+        .achievement-org {
+            font-size: 9.5pt;
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 0.06in;
+        }
+
+        /* Education */
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0.1in;
+            background: #f9fafb;
+            border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+
+        .degree {
+            font-size: 10.5pt;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.03in;
+        }
+
+        .university {
+            font-size: 9.5pt;
+            color: #4b5563;
+            font-weight: 500;
+        }
+
+        .year {
+            font-size: 9.5pt;
+            color: #6b7280;
+            font-weight: 600;
+            background: #e5e7eb;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        /* Two-column layout */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 0.25in;
+            margin-top: 0.2in;
+        }
+
+        .left-column,
+        .right-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .resume {
+                margin: 0;
+                padding: 0.5in 0.6in;
+                box-shadow: none;
+            }
+
+            .header {
+                margin: 0 0 0.25in 0;
+                padding: 0.2in 0;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+
+            .job {
+                page-break-inside: avoid;
+            }
+
+            .project {
+                page-break-inside: avoid;
+            }
+
+            .content-wrapper {
+                display: grid;
+                grid-template-columns: 1.2fr 0.8fr;
+                gap: 0.25in;
+            }
+        }
+
+        @page {
+            size: letter;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="name">SEENUVASAN T</h1>
+            <div class="title">Security Engineer | cyber product Developer | Security Innovator</div>
+            <div class="contact">
+                <span class="contact-item">📍 Chennai, Tamil Nadu</span>
+                <span class="contact-item">📞 +91 9994745592</span>
+                <span class="contact-item">💼 linkedin.com/in/seenu-vasan1947</span>
+                <span class="contact-item">💻 github.com/seenuvasan1947</span>
+            </div>
+        </div>
+
+        <!-- Key Highlights -->
+        <!-- <div class="highlights">
+            <div class="highlight-box">
+                <div class="highlight-number">125+</div>
+                <div class="highlight-label">Detection Rules Built</div>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-number">3+</div>
+                <div class="highlight-label">Enterprise Platforms</div>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-number">10+</div>
+                <div class="highlight-label">Validated Audit Findings</div>
+            </div>
+        </div> -->
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p style="font-size: 9.5pt; color: #374151; line-height: 1.4;">
+                Security Engineer with proven expertise in building enterprise-scale security tools handling massive
+                data volumes. Specialized in creating innovative security tools from scratch, including static
+                analyzers, VAPT automation, and surface web monitoring systems. Demonstrated success in Web3 security
+                research with 10+ validated findings in cyfrin.io first-flights and Hall of Fame recognition for
+                responsible
+                disclosure at meesho. Strong foundation in ElasticSearch optimization, microservices architecture, and
+                queue-based
+                systems for large-scale operations.
+            </p>
+        </div>
+
+        <!-- Two-column content wrapper -->
+        <div class="content-wrapper">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Professional Experience -->
+                <div class="section">
+                    <h2 class="section-title">Professional Experience</h2>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-title">Security Platform Developer</div>
+                            <div class="job-date">July 2024 - Present</div>
+                        </div>
+                        <div class="company">Current Company | finstein| Chennai</div>
+
+                        <div class="project">
+                            <div class="project-name">Deepscanx - Enterprise Passive Reconnaissance Platform</div>
+                            <ul>
+                                <li>Built scalable platform scanning GitHub, Google, Reddit for data leaks with
+                                    automated
+                                    scheduled monitoring</li>
+                                <li>Implemented webhook notifications (Telegram, Teams) with double-layer encryption for
+                                    secure
+                                    data transmission</li>
+                                <li>Designed flexible plugin architecture enabling rapid integration of new data sources
+                                    and
+                                    notification channels</li>
+                                <li>Developed queue-based strategy optimizing large-scale scanning operations and
+                                    resource
+                                    management</li>
+                            </ul>
+                        </div>
+
+                        <div class="project">
+                            <div class="project-name">Deepbreax - Dark Web Credential Monitoring at Scale</div>
+                            <ul>
+                                <li>Engineered ElasticSearch implementation handling millions of unstructured records
+                                    with
+                                    optimized retrieval (<100ms)< /li>
+                                <li>Built reusable microservice payment system reducing development time across 3+
+                                    products by
+                                    40%</li>
+                                <li>Created RESTful API endpoints enabling external consumption of monitoring services
+                                    by
+                                    enterprise clients</li>
+                                <li>Implemented real-time data streaming architecture delivering instant user
+                                    notifications</li>
+                            </ul>
+                        </div>
+
+                        <div class="project">
+                            <div class="project-name">VAPT Automation Platform</div>
+                            <ul>
+                                <li>Automated vulnerability assessment operations integrating 10+ security tools (Nmap,
+                                    Nuclei,
+                                    SQLMap, etc.)</li>
+                                <li>Implemented intelligent queue strategy for tool orchestration, load balancing, and
+                                    parallel
+                                    execution</li>
+                                <li>Built node-based workflow backend enabling flexible security testing process
+                                    automation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Innovation Projects -->
+                <div class="section">
+                    <h2 class="section-title">Innovation Projects</h2>
+
+                    <div class="project">
+                        <div class="project-name">PTSScan - Web3 Security Static Analyzer | Personal Project</div>
+                        <ul>
+                            <li>Built from scratch using ANTLR parser with 125+ detection rules across 8 categories
+                                (Security,
+                                DeFi, Access Control, etc.)</li>
+                            <li>Outperforms industry-standard tools (Slither, Mythril) in vulnerability detection
+                                accuracy with
+                                lower false positive rate</li>
+                            <li>Generates professional reports (JSON, Excel) with code snippets, line numbers, and
+                                severity
+                                classifications</li>
+                            <li>Demonstrates deep understanding of compiler design, static analysis techniques, and
+                                security
+                                automation</li>
+                        </ul>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-name">Automated API Security Testing Pipeline | Personal Project</div>
+                        <ul>
+                            <li>Created BurpSuite-like tool combining HTTP proxy with AI analysis (OpenAI/Gemini) for
+                                intelligent testing</li>
+                            <li>Automatically captures requests/responses, identifies injection points, and generates
+                                context-aware payloads</li>
+                            <li>Combines regex pattern matching with LLM reasoning for enhanced vulnerability discovery
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-name">Enterprise Code Analysis Suite | Professional Contribution</div>
+                        <ul>
+                            <li>Developed SonarQube integration tools bypassing community edition limitations for
+                                enterprise
+                                deployment</li>
+                            <li>Built custom static analyzers for PL/SQL and Dart following SonarQube plugin
+                                architecture</li>
+                            <li>Created automation for bulk exporting SonarQube, SpotBugs, Semgrep reports (handling
+                                1000+
+                                projects)</li>
+                            <li>Developed intelligent project creation and scanning automation based on Lines of Code
+                                metrics
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-name">Keyscanner - Optimized Secret Detection | Personal Project</div>
+                        <ul>
+                            <li>Scans GitHub, NPM, Python repositories for exposed secrets using optimized pattern
+                                matching</li>
+                            <li>Implements rate limit avoidance strategies and intelligent caching for large-scale
+                                scanning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Security Research & Achievements -->
+                <div class="section">
+                    <h2 class="section-title">Security Research & Achievements</h2>
+
+                    <div class="achievement">
+                        <div class="achievement-title">Bug Bounty & Responsible Disclosure</div>
+                        <div class="achievement-org">Meesho (May 2025) - Hall of Fame Recognition</div>
+                        <ul>
+                            <li>Identified and reported critical credential leak in supplier portal affecting 1000+
+                                vendors</li>
+                            <li>Security team validated findings, invalidated compromised credentials, and invited to
+                                Hall of
+                                Fame</li>
+                            <li>Continuous security monitoring and responsible disclosure for multiple organizations
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="achievement">
+                        <div class="achievement-title">Web3 Security Audits</div>
+                        <div class="achievement-org">Cyfrin First Flight - Smart Contract Audit Competitions</div>
+                        <ul>
+                            <li>10+ validated findings across multiple competitions demonstrating critical vulnerability
+                                identification</li>
+                            <li>Proven ability to identify complex security issues under time pressure in
+                                production-grade smart
+                                contracts</li>
+                            <li>Expertise in DeFi protocols, access control vulnerabilities, and economic attack vectors
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="section">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <div class="skill-label">Languages</div>
+                            <div class="skill-items">Python (Expert), Solidity, JavaScript, SQL, PL/SQL</div>
+                        </div>
+                        <div class="skill-category">
+                            <div class="skill-label">Security Tools</div>
+                            <div class="skill-items">ANTLR, SonarQube, Semgrep, SpotBugs, Burp Suite, Nuclei, SQLMap
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <div class="skill-label">Databases</div>
+                            <div class="skill-items">ElasticSearch (Expert - Optimization at Scale), PostgreSQL</div>
+                        </div>
+                        <div class="skill-category">
+                            <div class="skill-label">Architecture</div>
+                            <div class="skill-items">Microservices, Queue Systems, REST APIs, Webhooks, Event-Driven
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <div class="skill-label">Cloud & DevOps</div>
+                            <div class="skill-items">AWS, CI/CD Pipelines, Docker, Infrastructure as Code</div>
+                        </div>
+                        <div class="skill-category">
+                            <div class="skill-label">Security Domains</div>
+                            <div class="skill-items">Static/Dynamic Analysis, VAPT, Web3 Security, Encryption, Threat
+                                Intelligence</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="section">
+                    <h2 class="section-title">Education</h2>
+                    <div class="education-item">
+                        <div>
+                            <div class="degree">B.Tech in Information Technology</div>
+                            <div class="university">Anna University</div>
+                        </div>
+                        <div class="year">2024</div>
+                    </div>
+                </div>
+
+                <!-- Key Strengths -->
+                <div class="section">
+                    <h2 class="section-title">Key Strengths</h2>
+                    <ul>
+                        <li><strong>Builder Mindset:</strong> Creates tools from scratch vs. using existing solutions
+                        </li>
+                        <li><strong>Enterprise Scale:</strong> Production platforms handling massive data volumes</li>
+                        <li><strong>Security Innovation:</strong> Novel approaches combining traditional & cutting-edge
+                            techniques</li>
+                        <li><strong>Full-Stack Security:</strong> Infrastructure to application to Web3 security
+                            expertise</li>
+                        <li><strong>Proven Expertise:</strong> Validated findings in professional and competitive
+                            environments
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
