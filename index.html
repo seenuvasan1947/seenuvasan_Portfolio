@@ -61,7 +61,7 @@
                     <span class="title-line gradient-text">Enterprise Platform Developer</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Building enterprise-scale security platforms & innovative tools that protect organizations worldwide
+                    Building enterprise-scale security platforms, custom static analyzers & mobile security tools — from source code to smart contracts
                 </p>
                 <div class="hero-stats">
                     <div class="stat-item">
@@ -170,71 +170,78 @@
                 <span class="section-tag">Professional Journey</span>
                 <h2 class="section-title">Work Experience</h2>
             </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Security Platform Product Development</h3>
-                            <span class="timeline-date">July 2024 - Present</span>
+            <div class="exp-wrapper">
+                <div class="exp-role-header">
+                    <div class="exp-role-left">
+                        <span class="exp-role-tag">Full-Time</span>
+                        <h3 class="exp-role-title">Security Platform Engineer</h3>
+                        <p class="exp-role-company">Current Company &mdash; Chennai, Tamil Nadu</p>
+                    </div>
+                    <div class="exp-role-right">
+                        <span class="exp-date-badge">July 2024 &ndash; Present</span>
+                    </div>
+                </div>
+                <p class="exp-summary">
+                    Core engineer responsible for designing and building enterprise-grade security platforms from the ground up — handling architecture, backend development, and full product delivery at scale.
+                </p>
+
+                <div class="platform-list">
+
+                    <div class="platform-item">
+                        <div class="platform-meta">
+                            <span class="platform-label">01</span>
+                            <div class="platform-title-row">
+                                <h4>Passive Reconnaissance Platform</h4>
+                                <span class="platform-type">Enterprise Security Tool</span>
+                            </div>
                         </div>
-                        <p class="timeline-company">Current Company | Chennai</p>
-                        <p class="timeline-description">Core developer on enterprise security platforms handling massive
-                            scale</p>
-
-                        <div class="project-cards">
-                            <div class="project-card">
-                                <div class="project-card-header">
-                                    <h4>Reconnaissance Platform</h4>
-                                    <span class="project-tag">Enterprise Security Tool</span>
-                                </div>
-                                <p class="project-description">Enterprise Passive Reconnaissance Platform</p>
-                                <ul class="project-features">
-                                    <li>Built platform scanning GitHub, Google, Reddit for data leaks with scheduled
-                                        monitoring</li>
-                                    <li>Implemented webhook notifications (Telegram, Teams) and <strong>double-layer
-                                            encryption</strong>
-                                        for secure data transmission</li>
-                                    <li>Designed flexible architecture allowing easy addition of new data sources and
-                                        notification channels</li>
-                                    <li>Developed queue-based strategy for efficient large-scale scanning operations
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-card-header">
-                                    <h4>Dark Web Monitoring</h4>
-                                    <span class="project-tag">Credential Intelligence Platform</span>
-                                </div>
-                                <p class="project-description">Dark Web Credential Monitoring at Scale</p>
-                                <ul class="project-features">
-                                    <li>Engineered ElasticSearch implementation handling massive unstructured data with
-                                        optimized retrieval</li>
-                                    <li>Built microservice payment system reused across multiple products, saving
-                                        development time</li>
-                                    <li>Created API endpoints enabling external consumption of monitoring services</li>
-                                    <li>Implemented data streaming for real-time user experience</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-card-header">
-                                    <h4>VAPT Automation Platform</h4>
-                                    <span class="project-tag">Security Automation</span>
-                                </div>
-                                <p class="project-description">Automated Vulnerability Assessment & Penetration Testing
-                                </p>
-                                <ul class="project-features">
-                                    <li>Automated vulnerability assessment operations with integrated security tools
-                                    </li>
-                                    <li>Implemented queue strategy for tool orchestration and load balancing</li>
-                                    <li>Built workflow backend with node-based logic for flexible process automation
-                                    </li>
-                                </ul>
-                            </div>
+                        <ul class="platform-points">
+                            <li>Scans GitHub, Google, and Reddit for credential leaks and sensitive data exposures with scheduled automated monitoring</li>
+                            <li>Double-layer encryption for secure data transmission; webhook delivery via Telegram and Microsoft Teams</li>
+                            <li>Queue-based architecture for efficient large-scale scanning with pluggable data source and notification channel support</li>
+                        </ul>
+                        <div class="platform-stack">
+                            <span>Python</span><span>Queue Systems</span><span>REST APIs</span><span>Webhooks</span>
                         </div>
                     </div>
+
+                    <div class="platform-item">
+                        <div class="platform-meta">
+                            <span class="platform-label">02</span>
+                            <div class="platform-title-row">
+                                <h4>Dark Web Credential Monitoring Platform</h4>
+                                <span class="platform-type">Credential Intelligence</span>
+                            </div>
+                        </div>
+                        <ul class="platform-points">
+                            <li>ElasticSearch implementation handling massive unstructured datasets with optimized query and retrieval performance</li>
+                            <li>Reusable microservice payment module integrated across multiple products, reducing development overhead</li>
+                            <li>Real-time data streaming pipeline for live monitoring experience; external API endpoints for third-party consumption</li>
+                        </ul>
+                        <div class="platform-stack">
+                            <span>ElasticSearch</span><span>Microservices</span><span>Data Streaming</span><span>PostgreSQL</span>
+                        </div>
+                    </div>
+
+                    <div class="platform-item">
+                        <div class="platform-meta">
+                            <span class="platform-label">03</span>
+                            <div class="platform-title-row">
+                                <h4>VAPT Automation Platform</h4>
+                                <span class="platform-type">Security Automation</span>
+                            </div>
+                        </div>
+                        <ul class="platform-points">
+                            <li>Automated end-to-end vulnerability assessment and penetration testing workflows with integrated industry-standard security tools</li>
+                            <li>Queue-based tool orchestration with load balancing; node-based workflow backend for flexible process automation</li>
+                            <li>Built a native <strong>Android application</strong> for mobile VAPT — HTTP/HTTPS traffic interception via custom proxy, dynamic SSL certificate installation, and real-time request/response capture for mobile security assessments</li>
+                            <li>Android app leverages VPN Service API with TUN interface, enabling transparent traffic routing without root access; JNI/NDK integration for performance-critical interception logic</li>
+                        </ul>
+                        <div class="platform-stack">
+                            <span>Android (VPN API)</span><span>Go (Proxy)</span><span>Flutter/Dart</span><span>JNI/NDK</span><span>Queue Systems</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -391,63 +398,116 @@
                 <h2 class="section-title">Skills & Technologies</h2>
             </div>
             <div class="skills-grid">
+
                 <div class="skill-category">
                     <h3>Languages</h3>
                     <div class="skill-items">
                         <span class="skill-item expert">Python</span>
-                        <span class="skill-item">Solidity</span>
+                        <span class="skill-item expert">Go</span>
+                        <span class="skill-item expert">Solidity</span>
+                        <span class="skill-item">Dart / Flutter</span>
                         <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">SQL</span>
-                        <span class="skill-item">PL/SQL</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Security Tools</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Parser Development</span>
-                        <span class="skill-item">SonarQube</span>
-                        <span class="skill-item">Semgrep</span>
-                        <span class="skill-item">SpotBugs</span>
-                        <span class="skill-item">Burp Suite</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <div class="skill-items">
-                        <span class="skill-item expert">ElasticSearch</span>
-                        <span class="skill-item">PostgreSQL</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Architecture</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Microservices</span>
-                        <span class="skill-item">Queue Systems</span>
-                        <span class="skill-item">REST APIs</span>
-                        <span class="skill-item">Webhooks</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Cloud & DevOps</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">AWS(deployment)</span>
-                        <span class="skill-item">CI/CD Pipelines</span>
+                        <span class="skill-item">Rust</span>
+                        <span class="skill-item">SQL / PL/SQL</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
                     <h3>Security Domains</h3>
                     <div class="skill-items">
-                        <span class="skill-item">Static/Dynamic code audit</span>
+                        <span class="skill-item expert">Source Code Audit</span>
+                        <span class="skill-item expert">VAPT</span>
+                        <span class="skill-item expert">Smart Contract Auditing</span>
+                        <span class="skill-item">Mobile Security</span>
+                        <span class="skill-item">Web3 / DeFi Security</span>
+                        <span class="skill-item">API Security</span>
+                        <span class="skill-item">Static / Dynamic Analysis</span>
+                        <span class="skill-item">HTTP Interception</span>
+                        <span class="skill-item">Certificate Pinning Bypass</span>
+                        <span class="skill-item">Secret Detection</span>
                         <span class="skill-item">Encryption</span>
-                        <span class="skill-item">VAPT</span>
-                        <span class="skill-item">Web3 Security</span>
+                        <span class="skill-item">Threat Intelligence</span>
                     </div>
                 </div>
+
+                <div class="skill-category">
+                    <h3>Security Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-item expert">PTSScan (Custom Builder)</span>
+                        <span class="skill-item">ANTLR / AST Parsing</span>
+                        <span class="skill-item">Burp Suite</span>
+                        <span class="skill-item">Nmap</span>
+                        <span class="skill-item">Nuclei</span>
+                        <span class="skill-item">SQLMap</span>
+                        <span class="skill-item">Slither</span>
+                        <span class="skill-item">Mythril</span>
+                        <span class="skill-item">SonarQube</span>
+                        <span class="skill-item">Semgrep</span>
+                        <span class="skill-item">SpotBugs</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Mobile Development</h3>
+                    <div class="skill-items">
+                        <span class="skill-item expert">Android (VPN Service API)</span>
+                        <span class="skill-item">JNI / NDK Integration</span>
+                        <span class="skill-item">Flutter (Complex UI)</span>
+                        <span class="skill-item">Provider State Management</span>
+                        <span class="skill-item">TUN Interface</span>
+                        <span class="skill-item">Network Traffic Interception</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Backend & Architecture</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Microservices</span>
+                        <span class="skill-item">Queue Systems</span>
+                        <span class="skill-item">REST APIs</span>
+                        <span class="skill-item">Go Proxy Server</span>
+                        <span class="skill-item">Network Programming</span>
+                        <span class="skill-item">Compiler Design</span>
+                        <span class="skill-item">Event-Driven Architecture</span>
+                        <span class="skill-item">Webhooks</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Frontend & AI</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">React</span>
+                        <span class="skill-item">HTML / CSS</span>
+                        <span class="skill-item">OpenAI API</span>
+                        <span class="skill-item">Gemini API</span>
+                        <span class="skill-item">AI-Powered Analysis</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Blockchain</h3>
+                    <div class="skill-items">
+                        <span class="skill-item expert">EVM / Ethereum</span>
+                        <span class="skill-item">DeFi Protocols</span>
+                        <span class="skill-item">ERC-20 / 721 / 1155</span>
+                        <span class="skill-item">EIP-712</span>
+                        <span class="skill-item">Aptos</span>
+                        <span class="skill-item">Access Control Vulnerabilities</span>
+                        <span class="skill-item">Economic Attack Vectors</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Databases & Cloud</h3>
+                    <div class="skill-items">
+                        <span class="skill-item expert">ElasticSearch</span>
+                        <span class="skill-item">PostgreSQL</span>
+                        <span class="skill-item">AWS</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">CI/CD Pipelines</span>
+                    </div>
+                </div>
+
             </div>
 
             <div class="key-strengths">
@@ -471,12 +531,17 @@
                     <div class="strength-item">
                         <div class="strength-icon">🌐</div>
                         <h4>Full-Stack Security</h4>
-                        <p>From infrastructure to application to Web3 security</p>
+                        <p>From infrastructure to mobile to Web3 security — end to end</p>
                     </div>
                     <div class="strength-item">
                         <div class="strength-icon">✅</div>
                         <h4>Proven Expertise</h4>
-                        <p>Validated findings in both professional and competitive settings</p>
+                        <p>Validated findings in professional, competitive, and bug bounty settings</p>
+                    </div>
+                    <div class="strength-item">
+                        <div class="strength-icon">🔬</div>
+                        <h4>Compiler-Level Knowledge</h4>
+                        <p>Custom AST parsers, static analysis engines, and detection rule systems built from scratch</p>
                     </div>
                 </div>
             </div>
