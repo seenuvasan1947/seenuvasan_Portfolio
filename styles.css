@@ -251,6 +251,22 @@ a:hover {
     transform: translateX(-50%) scaleX(1);
 }
 
+.nav-link-web3 {
+    color: var(--color-secondary) !important;
+    border: 1px solid hsla(190, 85%, 55%, 0.35);
+    border-radius: var(--radius-sm);
+    padding: 0.3rem 0.75rem !important;
+}
+
+.nav-link-web3:hover {
+    background: hsla(190, 85%, 55%, 0.12);
+    border-color: var(--color-secondary);
+}
+
+.nav-link-web3::after {
+    display: none !important;
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
